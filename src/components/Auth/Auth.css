@@ -1,0 +1,123 @@
+.auth-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(45deg, #1a237e 30%, #7c4dff 90%);
+}
+
+.auth-paper {
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 100%;
+  width: 400px;
+}
+
+.auth-title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-button {
+  margin-top: 16px !important;
+}
+
+.auth-divider {
+  margin: 24px 0 !important;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.auth-divider span {
+  margin: 0 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.social-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background-color: transparent;
+}
+
+.social-button:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.auth-link {
+  color: #7c4dff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #6c3fff;
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .auth-paper {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .auth-divider::before,
+  .auth-divider::after {
+    border-color: rgba(255, 255, 255, 0.12);
+  }
+
+  .auth-divider span {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .social-button {
+    border-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+
+  .social-button:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .auth-paper {
+    padding: 24px;
+  }
+
+  .social-buttons {
+    flex-direction: column;
+  }
+}

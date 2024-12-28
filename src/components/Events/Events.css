@@ -1,0 +1,72 @@
+/* Container for the events page */
+.events-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* Heading for the events section */
+  .events-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* List of events */
+  .events-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Individual event item */
+  .event-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect for event items */
+  .event-item:hover {
+    background-color: #f9f9f9;
+  }
+  
+  /* Event title */
+  .event-item h2 {
+    font-size: 1.8rem;
+    margin: 0;
+    color: #333;
+  }
+  
+  /* Event description */
+  .event-item p {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: #555;
+  }
+  
+  /* Event date */
+  .event-item p:last-child {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  /* Link to view event details */
+  .event-item a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  /* Hover effect for the link */
+  .event-item a:hover {
+    color: #0056b3;
+  }
+  

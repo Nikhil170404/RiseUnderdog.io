@@ -1,0 +1,58 @@
+.wallet-container {
+  padding: 20px;
+}
+
+.wallet-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.wallet-container p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.wallet-container form {
+  margin-bottom: 20px;
+}
+
+.wallet-container input,
+.wallet-container select,
+.wallet-container button {
+  display: block;
+  margin: 10px 0;
+}
+
+.wallet-container .transaction-history {
+  margin-top: 20px;
+}
+
+.wallet-container .transaction-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.wallet-container .transaction-item.pending {
+  background-color: #f9f9f9;
+}
+
+.wallet-container .transaction-item.completed {
+  background-color: #e0ffe0;
+}
+
+.wallet-container .transaction-item.rejected {
+  background-color: #ffe0e0;
+}
+
+.wallet-container .error {
+  color: red;
+}
+
+.qr-code-container {
+  text-align: center;
+}
+
+.qr-code-container button {
+  margin-top: 20px;
+}

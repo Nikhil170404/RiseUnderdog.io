@@ -1,0 +1,458 @@
+/* General Styles */
+.navbar {
+  background-color: rgba(255, 255, 255, 0.98) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Hamburger Menu Styles */
+.navbar-toggle {
+  display: none; /* Hide on desktop by default */
+  flex-direction: column;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+}
+
+.hamburger {
+  width: 28px;
+  height: 20px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.hamburger .line {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #ffcc00;
+  position: absolute;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger .line:nth-child(1) {
+  top: 0;
+}
+
+.hamburger .line:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.hamburger .line:nth-child(3) {
+  bottom: 0;
+}
+
+.hamburger.open .line:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+}
+
+.hamburger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+  transform: rotate(-45deg);
+  bottom: 50%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  display: none; /* Hide on all devices by default */
+  flex-direction: column;
+  width: 280px;
+  height: 100vh;
+  background-color: #2a2a2a;
+  position: fixed;
+  left: 0;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000; /* Ensure sidebar is on top */
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+  z-index: 1100; /* Ensure close button is on top */
+}
+
+.sidebar-close:before {
+  content: '×'; /* Use a multiplication sign for the X */
+  font-size: 1.5rem;
+  line-height: 1;
+  color: #fff; /* Default color */
+}
+
+.sidebar-close:hover:before {
+  color: #e74c3c; /* Change color on hover */
+}
+
+.sidebar-menu {
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 3rem; /* Ensure content is below close button */
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  border-bottom: 1px solid #444;
+}
+
+.sidebar-link {
+  color: #f1f1f1;
+  text-decoration: none;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar-link:hover {
+  background-color: #333;
+}
+
+.sidebar-label {
+  margin-left: 0.75rem;
+}
+
+/* Hover effect for buttons */
+.MuiButton-root:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Active link styles */
+.MuiButton-root.active {
+  background-color: rgba(33, 150, 243, 0.08);
+  color: #2196f3;
+}
+
+/* Drawer styles */
+.MuiDrawer-paper {
+  background-color: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* List item hover effect */
+.MuiListItem-root:hover {
+  background-color: rgba(33, 150, 243, 0.08);
+}
+
+/* Avatar styles */
+.MuiAvatar-root {
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.MuiAvatar-root:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 0 2px currentColor;
+}
+
+/* Menu styles */
+.MuiMenu-paper {
+  margin-top: 8px;
+  min-width: 200px;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1) !important;
+  animation: menuFade 0.2s ease;
+}
+
+.MuiMenuItem-root {
+  padding: 12px 16px !important;
+  transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.MuiMenuItem-root:hover {
+  padding-left: 24px;
+  background-color: rgba(124, 77, 255, 0.08) !important;
+}
+
+/* Toolbar spacing */
+.MuiToolbar-root {
+  padding-left: 16px !important;
+  padding-right: 16px !important;
+}
+
+@media (min-width: 600px) {
+  .MuiToolbar-root {
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+  }
+}
+
+/* Logo styles */
+.navbar-logo {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.5px;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Button group spacing */
+.button-group {
+  display: flex;
+  gap: 8px;
+}
+
+/* Mobile menu icon */
+.menu-icon {
+  padding: 8px;
+}
+
+/* Dropdown menu animation */
+@keyframes menuFade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Active route indicator */
+.active-route {
+  position: relative;
+}
+
+.active-route::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #2196f3;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.active-route:hover::after {
+  transform: scaleX(1);
+}
+
+/* Styles for different devices */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: flex; /* Show hamburger on mobile */
+  }
+
+  .sidebar {
+    display: flex; /* Show sidebar on mobile */
+  }
+}
+
+@media (min-width: 769px) {
+  .navbar-toggle {
+    display: flex; /* Show hamburger on desktop */
+  }
+
+  .sidebar {
+    display: flex; /* Show sidebar on desktop */
+  }
+}
+
+/* Logout Button */
+.logout-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+
+  padding: 0.75rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.logout-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Dropdown Container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-toggle {
+  background-color: #2a2a2a;
+  color: #f1f1f1;
+  padding: 1rem;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dropdown-toggle:hover {
+  background-color: #333;
+}
+
+.dropdown-toggle:focus {
+  outline: none;
+}
+
+.dropdown-toggle i {
+  margin-right: 0.75rem;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #2a2a2a;
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  margin-top: 0.5rem;
+}
+
+.dropdown-menu a {
+  color: #f1f1f1;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #333;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu .fa {
+  margin-right: 0.5rem;
+}
+
+/* Additional styles for better visuals */
+.sidebar-item.dropdown {
+  border-bottom: none; /* Remove border from dropdown parent item */
+}
+
+.sidebar-item.dropdown .sidebar-link {
+  padding-right: 2rem; /* Adjust padding for dropdown item */
+}
+
+/* Button hover animations */
+.MuiButton-root {
+  position: relative;
+  overflow: hidden;
+}
+
+.MuiButton-root::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.MuiButton-root:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Icon animations */
+.MuiSvgIcon-root {
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.MuiSvgIcon-root:hover {
+  transform: scale(1.2);
+  color: #7c4dff;
+}
+
+.navbar-logo:hover .MuiSvgIcon-root {
+  transform: scale(1.2);
+  color: #7c4dff;
+}
+
+/* Navbar blur effect */
+.MuiAppBar-root {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .MuiAppBar-root {
+    background: rgba(26, 26, 26, 0.9) !important;
+  }
+
+  .MuiButton-root {
+    color: #ffffff;
+  }
+
+  .MuiMenuItem-root:hover {
+    background-color: rgba(124, 77, 255, 0.15) !important;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+  .MuiToolbar-root {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  .navbar-logo .MuiTypography-root {
+    font-size: 1.25rem;
+  }
+}

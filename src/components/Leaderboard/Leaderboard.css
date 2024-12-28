@@ -1,0 +1,51 @@
+/* src/components/Leaderboard/Leaderboard.css */
+.leaderboard-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .filters input,
+  .filters select {
+    margin-right: 10px;
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+  }
+  
+  .leaderboard-table th {
+    background-color: #f4f4f4;
+    color: #333;
+  }
+  
+  .leaderboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .leaderboard-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .leaderboard-table td {
+    font-size: 14px;
+  }
+  
+  .leaderboard-table th {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,189 @@
+.admin-panel {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  margin: 10px 0;
+}
+
+.tournament-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tournament-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.tournament-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tournament-header h3 {
+  margin: 0;
+}
+
+.tournament-image {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.tournament-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.admin-form {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-error {
+  color: red;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-primary,
+.btn-close {
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-close {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.btn-close:hover {
+  background-color: #5a6268;
+}
+
+.admin-modal {
+  max-width: 90%;
+  margin: auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.admin-modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.participants-modal {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tournament-item {
+    padding: 15px;
+  }
+
+  .tournament-image {
+    max-width: 80px;
+    max-height: 80px;
+  }
+
+  .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-close {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .admin-modal {
+    max-width: 100%;
+  }
+
+  .admin-panel {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-form {
+    padding: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 6px;
+  }
+}
+.tournament-actions {
+  display: flex;
+  flex-direction: column; /* Stack buttons vertically */
+  gap: 8px; /* Add spacing between buttons */
+  align-items: flex-start; /* Align buttons to the start */
+}
+
+.tournament-actions .MuiIconButton-root {
+  width: 100%; /* Make buttons full-width if needed */
+}

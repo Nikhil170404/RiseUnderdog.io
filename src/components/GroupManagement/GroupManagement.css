@@ -1,0 +1,301 @@
+.group-management {
+  max-width: 1400px; /* Increased width for a wider container */
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+.create-group-toggle {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 12px 24px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px; /* Rounded corners for a modern look */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+.create-group-toggle:hover {
+  background-color: #1EBE7F; /* Slightly darker green on hover */
+}
+
+.create-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px; /* Increased width for more space */
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.create-group input,
+.create-group textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.create-group input:focus,
+.create-group textarea:focus {
+  border-color: #25D366; /* WhatsApp green */
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37, 211, 102, 0.3);
+}
+
+.group-image-preview {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.create-group-button {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 12px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.create-group-button:hover {
+  background-color: #1EBE7F; /* Slightly darker green on hover */
+}
+
+.group-search {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px; /* Increased width for more space */
+  margin: 0 auto;
+  display: block;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-list {
+  margin-top: 20px;
+}
+
+.group-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: #fff;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group-image {
+  width: 70px; /* Increased width */
+  height: 70px; /* Increased height */
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+  border: 2px solid #25D366; /* WhatsApp green border */
+}
+
+.group-info {
+  flex: 1;
+}
+
+.group-button,
+.delete-group-button {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 8px 16px;
+  margin-left: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.group-button:hover {
+  background-color: #1EBE7F; /* Slightly darker green on hover */
+}
+
+.delete-group-button {
+  background-color: #DC3545;
+}
+
+.delete-group-button:hover {
+  background-color: #C82333; /* Darker red on hover */
+}
+
+.group-chat-modal,
+.group-info-modal {
+  max-width: 90%; /* Increase width relative to viewport */
+  width: 600px; /* Set a default width */
+  margin: 20px auto; /* Center with some space around */
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.modal-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px; /* Add padding to ensure modal doesn't touch edges */
+}
+
+.chat-header,
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chat-messages {
+  max-height: 400px; /* Increased height for ample space */
+  overflow-y: auto;
+  margin-bottom: 20px;
+  background-color: #e5ddd5; /* Light gray background */
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column-reverse; /* Ensures recent messages come at the bottom */
+}
+
+.chat-message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-message.self {
+  background-color: #dcf8c6; /* WhatsApp light green */
+  align-self: flex-end;
+}
+
+.chat-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-text-input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.send-chat-button {
+  background-color: #25D366; /* WhatsApp green */
+  color: white;
+  padding: 12px 24px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.send-chat-button:hover {
+  background-color: #1EBE7F; /* Slightly darker green on hover */
+}
+
+.modal-close-button,
+.chat-close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5em;
+}
+
+.modal-content {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+.remove-member-button {
+  background-color: #DC3545;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.remove-member-button:hover {
+  background-color: #C82333; /* Darker red on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .group-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .group-image {
+    margin-bottom: 10px;
+  }
+
+  .group-button,
+  .delete-group-button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .chat-messages {
+    max-height: 300px; /* Adjust height for better mobile view */
+    font-size: 0.9em;
+  }
+
+  .chat-text-input,
+  .send-chat-button {
+    width: 100%; /* Full width for inputs and buttons on mobile */
+  }
+
+  .create-group-toggle {
+    width: 100%;
+  }
+
+  .group-chat-modal,
+  .group-info-modal {
+    max-width: 95%; /* More responsive width on smaller screens */
+    width: 100%; /* Full width on smaller screens */
+    margin: 10px; /* Reduce margin on smaller screens */
+  }
+}
