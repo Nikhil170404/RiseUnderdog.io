@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/RiseUnderdog.io/static/css/main.5ed78f12.css",
-    "main.js": "/RiseUnderdog.io/static/js/main.a206108b.js",
+    "main.js": "/RiseUnderdog.io/static/js/main.d6e4f49c.js",
     "static/js/453.46c1e3b5.chunk.js": "/RiseUnderdog.io/static/js/453.46c1e3b5.chunk.js",
     "index.html": "/RiseUnderdog.io/index.html",
     "main.5ed78f12.css.map": "/RiseUnderdog.io/static/css/main.5ed78f12.css.map",
-    "main.a206108b.js.map": "/RiseUnderdog.io/static/js/main.a206108b.js.map",
+    "main.d6e4f49c.js.map": "/RiseUnderdog.io/static/js/main.d6e4f49c.js.map",
     "453.46c1e3b5.chunk.js.map": "/RiseUnderdog.io/static/js/453.46c1e3b5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5ed78f12.css",
-    "static/js/main.a206108b.js"
+    "static/js/main.d6e4f49c.js"
   ]
 }
