@@ -97,7 +97,7 @@ function App() {
     <ThemeProvider theme={gameTheme}>
       <CssBaseline />
       <NotificationProvider>
-        <Router>
+        <Router basename="/RiseUnderdog.io">
           <NotificationPermission />
           <Box sx={{ display: 'flex', minHeight: '100vh', flexDirection: 'column' }}>
             <Navbar />
